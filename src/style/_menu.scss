@@ -1,0 +1,56 @@
+.test {
+  margin: 0 15vw;
+}
+.menuBox {
+  font-size: 4vh;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #ff8a80;
+  position: fixed;
+  top: 0;
+  height: 12vh;
+  line-height: 11vh;
+  width: 100%;
+  text-align: center;
+  border-bottom-right-radius: 30%;
+  border-bottom-left-radius: 30%;
+}
+
+body {
+  background-color: #ffdfdf;
+  height: 100%;
+  width: 100%;
+}
+
+.menuTile {
+  width: auto;
+  height: 11vh;
+  background-color: #ff8a80;
+  border-bottom-left-radius: 35%;
+  border-bottom-right-radius: 35%;
+  float: left;
+  margin-top: 0vw;
+  margin-left: 5vw;
+}
+.menuTile:hover {
+  animation-name: menuHoverAnimation;
+  animation-duration: 0.35s;
+  animation-delay: 0.05s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+@keyframes menuHoverAnimation {
+  from {
+    padding: 0;
+  }
+  to {
+    border-bottom-left-radius: 20vw;
+    border-bottom-right-radius: 20vw;
+    line-height: 5vh;
+    padding: 3vh 1.5vw;
+    margin-left: 3vw;
+    background-color: #ff5151;
+    text-shadow: 1px 1px #FFAAA6;
+  }
+}
