@@ -1,11 +1,12 @@
-//import Login from "./login/login.jsx";
-import Content from "./site/content/content"
+import Login from "./login/login.jsx";
+import Content from "./site/content/content";
 import "./style/_index.scss";
 
 function App() {
   return (
     <div className="App">
-      <Content />
+            <Content />
+            <Login />
     </div>
   );
 }
