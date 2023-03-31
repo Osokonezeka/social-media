@@ -7,7 +7,7 @@
   height: 100vh;
 }
 
-.loginBox {
+.registerBox {
   margin: auto;
   width: 55vw;
   min-height: 60vh;
@@ -72,7 +72,7 @@
     outline: none;
   }
 
-  .loginHeader {
+  .registerHeader {
     padding: 2vh 2vw;
     height: 10vh;
     text-align: center;
@@ -81,7 +81,7 @@
     text-shadow: 1px 1px grey;
   }
 
-  .loginFooter {
+  .registerFooter {
     padding: 2vh 2vw;
     height: auto;
     text-align: center;

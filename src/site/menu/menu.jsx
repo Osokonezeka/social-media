@@ -1,13 +1,18 @@
+import { Link } from "react-router-dom";
 function Menu() {
   return (
     <div className="menuContaier">
       <div className="menuBox">
         <div className="test">
-        <div className="menuTile">Strona główna</div>
-        <div className="menuTile">Komentarze</div>
-        <div className="menuTile">Tablica</div>
-        <div className="menuTile">Profil</div>
-      </div>
+          <Link to="/content">
+            <div className="menuTile">Strona główna</div>
+          </Link>
+          <div className="menuTile">Komentarze</div>
+          <div className="menuTile">Tablica</div>
+          <Link to="/register">
+            <div className="menuTile">Stwórz profil</div>
+          </Link>
+        </div>
       </div>
     </div>
   );

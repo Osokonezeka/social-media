@@ -1,6 +1,24 @@
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { useState } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Login() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  function getToken(e) {
+    e.preventDefault();
+    const loginInfo = new URLSearchParams();
+    loginInfo.append("username", username);
+    loginInfo.append("password", password);
+
+    axios
+      .post("http://192.168.5.27:8000/token/", loginInfo)
+      .then((response) => {
+        console.log(response.data.access_token);
+        window.location = "/content";
+      });
+  }
   return (
     <div className="container">
       <div className="loginBox">
@@ -9,27 +27,25 @@ function Login() {
         <div className="loginBody">
           <input
             type="text"
-            id="login"
-            name="login"
+            name="username"
+            value={username}
             placeholder="Login"
-            maxLength="25"
+            onChange={(e) => setUsername(e.target.value)}
           />
           <input
             type="password"
-            id="password"
             name="password"
             placeholder="Hasło"
-            maxLength="32"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
-          <button
-            onClick={() => {
-              alert("das");
-            }}
-          >
-            ZALOGUJ SIĘ
-          </button>
+          <button onClick={getToken}>ZALOGUJ SIĘ</button>
         </div>
         <hr />
+
+        <a className="test">
+          Nie masz konta? <Link to="/register"> Zarejestruj się!</Link>
+        </a>
         <div className="loginFooter">
           <label className="icons">
             <i className="bi bi-facebook" onClick={() => console.log("fb")} />
@@ -52,4 +68,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Login; 

@@ -14,13 +14,17 @@
   text-align: center;
   border-bottom-right-radius: 30%;
   border-bottom-left-radius: 30%;
+  z-index: 100;
+  a {
+    color: black;
+  }
 }
 
 body {
-  background-color: #ffdfdf;
+  background-color: #fff2f2;
   height: 100%;
   width: 100%;
-} 
+}
 
 .menuTile {
   width: auto;
@@ -29,7 +33,7 @@ body {
   border-bottom-left-radius: 35%;
   border-bottom-right-radius: 35%;
   float: left;
-  margin-top: 0vw;
+  top: 0;
   margin-left: 5vw;
 }
 .menuTile:hover {
@@ -51,6 +55,6 @@ body {
     padding: 3vh 1.5vw;
     margin-left: 3vw;
     background-color: #ff5151;
-    text-shadow: 1px 1px #FFAAA6;
+    text-shadow: 1px 1px #ffaaa6;
   }
 }

@@ -10,10 +10,8 @@
   margin: 20vh 25vw 0vh 10vw;
 }
 
-.postButton:hover {
-  border: 2.1px solid black;
+.buttonPost:hover {
   background-color: aliceblue;
-  text-shadow: 0.4px 0.4px grey;
   cursor: pointer;
 }
 
@@ -28,18 +26,29 @@ textarea {
   border-radius: 4px;
 }
 
-.posts {
-  margin: 20vh 30vw 0vh 30vw;
-}
-.postSolo {
-  margin-top: 2vh;
-  padding: 1vh 1vw;
-  border: 4px solid black;
-  word-wrap: break-word;
+.buttonPost {
+  position: absolute;
+  margin-left: 85vw;
+  padding: 2vh 2vw;
+  border: 3px solid black;
+  border-radius: 4px;
 }
 
-.buttonPost {
-  margin-left: 50vw;
-  border: 4px double black;
-  border-radius: 4px;
+.posts {
+  margin: 15vh 15vw 0vh 15vw;
+}
+.profileInformation{
+  font-size: 2.6vh;
+  padding: 1vh 1vw;
+  border-radius: 10px;
+  background-color: #ff9590;
+}
+.postSolo {
+  margin-bottom: 2vh;
+  padding: 1vh 1vw;
+  font-size: 2.2vh;
+  background-color: #ffaaa6;
+  border: 6px solid #ffaaa6;
+  border-radius: 10px;
+  word-wrap: break-word;
 }

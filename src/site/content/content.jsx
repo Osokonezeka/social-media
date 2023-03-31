@@ -1,19 +1,20 @@
 import { useState } from "react";
 import Menu from "../menu/menu";
 function Content() {
-  const [post, newPost] = useState([]);
+  const [post, newPost] = useState([])
   return (
     <div>
       <Menu />
-      <textarea id="tekst" placeholder="Wprowadź treść postu" />
+      <textarea id="postCont" placeholder="Wprowadź treść postu" />
       <br />
       <button
         className="buttonPost"
         onClick={() => {
-          let co = document.getElementById("tekst").value;
+          let cont = document.getElementById("postCont").value;
           newPost([
             {
-              title: co,
+              title: "napisał:",
+              cont: cont,
             },
             ...post,
           ]);
@@ -21,11 +22,12 @@ function Content() {
       >
         Stwórz post
       </button>
-
       <div className="posts">
         {post.map((e) => (
-          <div>
-            <div className="postSolo">{e.title}</div>
+          <div className="profilePost">
+            <div className="profileInformation">{e.title}</div>
+            
+            <div className="postSolo">{e.cont}</div>
           </div>
         ))}
       </div>
