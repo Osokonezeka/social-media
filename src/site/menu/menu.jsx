@@ -5,9 +5,11 @@ function Menu() {
       <div className="menuBox">
         <div className="test">
           <Link to="/content">
-            <div className="menuTile">Strona główna</div>
+            <div className="menuTile">Stwórz post</div>
           </Link>
-          <div className="menuTile">Komentarze</div>
+          <Link to="/posts">
+          <div className="menuTile">Posty</div>
+          </Link>
           <div className="menuTile">Tablica</div>
           <Link to="/register">
             <div className="menuTile">Stwórz profil</div>

@@ -13,8 +13,10 @@ function Login() {
     loginInfo.append("password", password);
 
     axios
-      .post("http://192.168.5.27:8000/token/", loginInfo)
+      .post("http://192.168.5.22:8000/token/", loginInfo)
       .then((response) => {
+        localStorage.setItem("token", response.data.access_token);
+        console.log(localStorage.getItem("token"));
         console.log(response.data.access_token);
         window.location = "/content";
       });
@@ -43,9 +45,9 @@ function Login() {
         </div>
         <hr />
 
-        <a className="test">
+        <div className="test">
           Nie masz konta? <Link to="/register"> Zarejestruj się!</Link>
-        </a>
+        </div>
         <div className="loginFooter">
           <label className="icons">
             <i className="bi bi-facebook" onClick={() => console.log("fb")} />
@@ -68,4 +70,4 @@ function Login() {
   );
 }
 
-export default Login; 
+export default Login;

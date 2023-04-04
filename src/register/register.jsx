@@ -8,6 +8,7 @@ function Register() {
   const [name, updateName] = useState("");
   const [surname, updateSurname] = useState("");
   const [password, updatePassword] = useState("");
+
   const accountDetails = {
     username: username,
     name: name,
@@ -15,14 +16,15 @@ function Register() {
     password: password,
     avatar_url: "",
     description: "",
+    disabled: false,
+    is_admin: false,
   };
 
   function sendCreationRequest(e) {
     e.preventDefault();
     axios
-      .post("http://192.168.5.27:8000/users/", accountDetails)
+      .post("http://192.168.5.22:8000/users/", accountDetails)
       .then((response) => {
-        console.log(response);
         window.location = "/";
       });
   }
@@ -67,24 +69,24 @@ function Register() {
           <button onClick={sendCreationRequest}>STWÓRZ KONTO</button>
         </div>
         <hr />
-        <a className="test">
+        <div className="test">
           Masz już konto? <Link to="/"> Zaloguj się!</Link>
-        </a>
+        </div>
         <div className="registerFooter">
           <label className="icons">
             <i className="bi bi-facebook" onClick={() => console.log("fb")} />
           </label>
           <label className="icons">
-            <i class="bi bi-discord" onClick={() => console.log("dc")} />
+            <i className="bi bi-discord" onClick={() => console.log("dc")} />
           </label>
           <label className="icons">
-            <i class="bi bi-google" onClick={() => console.log("ggl")} />
+            <i className="bi bi-google" onClick={() => console.log("ggl")} />
           </label>
           <label className="icons">
-            <i class="bi bi-twitter" onClick={() => console.log("tw")} />
+            <i className="bi bi-twitter" onClick={() => console.log("tw")} />
           </label>
           <label className="icons">
-            <i class="bi bi-tiktok" onClick={() => console.log("tt")} />
+            <i className="bi bi-tiktok" onClick={() => console.log("tt")} />
           </label>
         </div>
       </div>
