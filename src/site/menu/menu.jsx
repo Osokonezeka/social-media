@@ -8,7 +8,7 @@ function Menu() {
             <div className="menuTile1">Stwórz post</div>
           </Link>
           <Link to="/posts">
-          <div className="menuTile2">Posty</div>
+            <div className="menuTile2">Posty</div>
           </Link>
           <Link to="/register">
             <div className="menuTile3">Stwórz profil</div>

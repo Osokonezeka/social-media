@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import Menu from "../menu/menu"
+import Menu from "../menu/menu";
 function Posts() {
   const AUTH_TOKEN = localStorage.getItem("token");
   axios.defaults.headers.common["Authorization"] = "Bearer " + AUTH_TOKEN;
@@ -21,17 +21,17 @@ function Posts() {
 
   return (
     <>
-    <Menu/>
+      <Menu />
       <div className="posts">
         {posts.map((post) => (
           <div className="profilePost" key={post.id}>
             <div className="postInformation">
               <div>
                 <div className="postCenter">
-                <img src={post.author.avatar_url}/>
-                <div className="nameColor">
-                {post.author.name} {post.author.surname} napisał:
-                </div>
+                  <img src={post.author.avatar_url} />
+                  <div className="nameColor">
+                    {post.author.name} {post.author.surname} napisał:
+                  </div>
                 </div>
               </div>
               {post.title}

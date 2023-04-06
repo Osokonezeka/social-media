@@ -50,7 +50,7 @@ function Login() {
         </div>
         <div className="loginFooter">
           <label className="icons">
-            <i className="bi bi-facebook" onClick={() => console.log("fb")} />
+            <i className="bi bi-facebook" />
           </label>
           <label className="icons">
             <i class="bi bi-discord" onClick={() => console.log("dc")} />
