@@ -5,14 +5,13 @@ function Menu() {
       <div className="menuBox">
         <div className="test">
           <Link to="/content">
-            <div className="menuTile">Stwórz post</div>
+            <div className="menuTile1">Stwórz post</div>
           </Link>
           <Link to="/posts">
-          <div className="menuTile">Posty</div>
+          <div className="menuTile2">Posty</div>
           </Link>
-          <div className="menuTile">Tablica</div>
           <Link to="/register">
-            <div className="menuTile">Stwórz profil</div>
+            <div className="menuTile3">Stwórz profil</div>
           </Link>
         </div>
       </div>

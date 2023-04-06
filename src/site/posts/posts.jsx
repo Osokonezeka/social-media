@@ -13,7 +13,7 @@ function Posts() {
   function loadPosts() {
     axios.get("http://192.168.5.22:8000/posts", params).then((response) => {
       console.log(response.data.items);
-      getPosts(response.data.items);
+      getPosts(response.data.items.reverse());
     });
   }
 
@@ -27,7 +27,12 @@ function Posts() {
           <div className="profilePost" key={post.id}>
             <div className="postInformation">
               <div>
+                <div className="postCenter">
+                <img src={post.author.avatar_url}/>
+                <div className="nameColor">
                 {post.author.name} {post.author.surname} napisał:
+                </div>
+                </div>
               </div>
               {post.title}
             </div>
